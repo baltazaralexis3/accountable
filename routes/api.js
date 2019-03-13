@@ -4,11 +4,7 @@ const express = require('express');
 const router = express.Router;
 var request = require('request');
 
-//get all reps (index)
-
-//add repCard to user board
-
-//delete rep card from board
+//will need a POST route for when 
 
 
 // authentication function also goes here

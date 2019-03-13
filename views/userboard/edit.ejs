@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <h1>update info</h1>
+    <div class='card'>
+        <p><%= card.legislator %></p> 
+        <p><%= card.role %></p> 
+        <p><%= card.party %></p> 
+        <p>@<%= card.twitter %></p> 
+    
+    <form id="editCard" action="/userboard/<%=card._id%>?_method=PUT" method="POST">
+        <label>analysis:</label><br>
+        <textarea name="analysis" cols="60" rows="10"><%=card.analysis%></textarea>
+        <input type="submit" value="save changes">
+    </form>
+  </div>
+  </body>
+
+</html>

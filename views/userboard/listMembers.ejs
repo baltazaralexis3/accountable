@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+ <body>
+    <h1>add members to my board</h1>
+
+    <% memberList.forEach(function(m) { %>
+    <form action="/userboard/addmember"      method="POST">
+       <input type='hidden' name='legislator' value='<%= m.name %>'><%= m.name %></input>
+       
+       <input type='hidden' name='role' value='<%= m.role %>'></input>
+
+       <input type='hidden' name='party' value='<%= m.party %>'></input>
+ 
+       <input type='hidden' name='twitter' value='<%= m.twitter_id %>'></input>
+ 
+     <button type="submit">+</button>
+    </form>
+    <% }) %>
+ </body>
+</html>
